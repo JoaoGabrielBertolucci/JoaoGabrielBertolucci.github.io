@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Configura o conjunto de caracteres usados na página -->
+    <meta charset="UTF-8"> 
+    
+    <!-- Indica a versão do navegador compatível com a página -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    
+    <!-- Configura a largura da janela e a escala da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+
+    <!-- Define o título da página -->
+    <title>calculadora</title> 
+    
+    <script src="Calculo.js"></script>
+    <!-- referencia o arquivo css-->
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+<body>
+    
+    <!-- Cria um cabeçalho de nível 1 na págin -->  
+    <h1> Calculadora IMC</h1> 
+   
+    <!-- Cria um formulário na página -->
+    <form> 
+    
+    <!-- Cria uma caixa de texto para inserir os Valores -->
+    peso <input type="text" id="peso"><br>
+    
+    altura <input type="text"id = "altura"><br><br>
+
+    <!--idade <input type="text" id="Idade"><br><br>-->
+    
+    <!-- Caixa de Seleção de Genero-->
+    <select id="genero">
+        <option> Qual Seu Genero?</option>
+        <option id="M"> Masculino</option>
+        <option id='F'> Feminino</option>
+    </select>
+    
+    <br><br> 
+    
+    <!-- Cria um botão para executar o caulo de Imc-->
+    <button type="button" onclick="calcularIMC()" id="CalcIMC"> CalcularIMC</button><br>
+    
+
+    <!-- Mostra a palavra "RESULTADO" seguida do campo de texto de resposta, que é somente leitura -->
+    RESULTADO <input type="text" id = "resulIMC" readonly> 
+   </form> 
+
+</body>
+</html>

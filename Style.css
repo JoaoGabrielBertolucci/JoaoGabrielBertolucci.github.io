@@ -1,0 +1,59 @@
+/* Define as cores de fundo e fonte para o corpo da página */
+body {
+    background-color: rgb(8, 167, 230);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Estiliza o formulário */
+form {
+    
+    margin-top: 50px;
+    text-align: center;
+}
+
+input[id="peso"]{
+    margin-left: 5px;
+}
+
+/* Estiliza os campos de entrada de texto */
+input[type=text] {
+    font-size: medium;
+    border-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+#genero{
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+
+#CalcIMC {
+    
+    background-color:   rgb(8, 167, 230);
+    color: white;
+    
+    border-radius: 30px;
+    padding: 10px;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#CalcIMC:hover{
+    background-color: whitesmoke;
+    color: rgb(8, 167, 230);
+}
+
+ 
+
