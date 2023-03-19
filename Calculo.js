@@ -1,18 +1,21 @@
 // Define as funções para cada operação de imc   
-function IMC_H(peso, altura) {      
+function IMC_H(peso, altura, calculo) {      
     
-    peso = parseFloat(document.getElementById("peso").value);
-    altura = parseFloat(document.getElementById("altura").value);  
+    peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
+    altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
     
-    return peso / (altura * altura);
+    calculo = peso / (altura * altura);
+
+    return calculo;
 }
 
-function IMC_F(peso, altura) {
+function IMC_F(peso, altura, calculo) {
     
-    peso = parseFloat(document.getElementById("peso").value);
-    altura = parseFloat(document.getElementById("altura").value);
+    peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
+    altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
+    calculo = peso / (altura * altura).toFixed(2);
 
-    return peso / (altura * altura);
+    return calculo;
 }
 
 
@@ -26,56 +29,32 @@ function calcularIMC(peso, altura, resultado){
 
         var Genero = document.getElementById("genero").value;
         
+        var teste = "erro";
         
         // Verifica se os campos de peso e altura foram preenchidos corretamente
         if(isNaN(peso) || isNaN(altura)){
+            alert(erro);
             alert("Preencha corretamente os campos de peso e altura."); // retorna 0 para indicar que a função não funcionou corretamente
-            return 0; 
-        }   
-        
-        if(isNaN(peso) || isNaN(altura)){
-            alert("Preencha corretamente os campos de peso e altura.");
             return 0; 
         }   
     
         if (Genero === "Masculino") {
-            resultado = IMC_H(peso, alura);
+            resultado = IMC_H(peso, altura);
+
             
-            if (resultado <= 18.5) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + "Magreza";
-            }
-    
-            else if (resultado > 18.5 || resultado <= 24.9) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + " Normal";
-            }
-    
-            else if (resultado > 24.9 && resultado <= 29.9) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + " Sobrepeso";
-            }
-    
-            else if (resultado > 29.9 && resultado <= 34.9) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + " Obesidade grau I";
-            }
-    
-            else if (resultado > 34.9 && resultado <= 39.9) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + " Obesidade grau II";
-            }
-    
-            else if (resultado > 39.9) {
-                document.getElementById("resulIMC").value = resultado.toFixed(2) + " Obesidade grau III";
-            }
+        }
         
-        } 
         else if (Genero === "Feminino") {
             resultado = IMC_F();
             // Restante do código
         } 
         else {
-            alert("Houve um erro ao calcular o IMC.");
+            
             alert("Por favor, selecione o gênero.");
         }
     
         if(isNaN(resultado)){
+            alert("Houve um erro ao calcular o IMC.");
             return 0;
         }
     
