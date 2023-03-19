@@ -4,7 +4,7 @@ function IMC_H(peso, altura, calculo) {
     peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
     altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
     
-    calculo = peso / (altura * altura);
+    calculo = peso / (altura * altura).toFixed(2);
 
     return calculo;
 }
