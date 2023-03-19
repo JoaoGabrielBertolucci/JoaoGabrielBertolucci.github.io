@@ -40,12 +40,14 @@ function calcularIMC(peso, altura, resultado){
     
         if (Genero === "Masculino") {
             resultado = IMC_H();
+            alert("teste Funct H ok");
 
     
         }
         
         else if (Genero === "Feminino") {
             resultado = IMC_F();
+            alert("teste Funct F ok");
             // Restante do código
         } 
         else {
