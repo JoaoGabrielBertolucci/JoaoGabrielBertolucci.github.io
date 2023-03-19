@@ -40,7 +40,7 @@ function calcularIMC(peso, altura, resultado){
     
         if (Genero === "Masculino") {
             resultado = IMC_H(peso, altura);
-
+            document.getElementById("resulIMC").value = resultado;
             
         }
         
