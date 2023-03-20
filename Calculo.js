@@ -41,12 +41,60 @@ function calcularIMC(peso, altura, resultado){
         if (Genero === "Masculino") {
             resultado = IMC_H();
 
-    
+            if (resultado < 18.5) {
+                alert("Magreza: " + resultado);
+            }
+
+                else if ( resultado < 24.9) {
+                    alert("Normal");
+                }
+      
+            else if (resultado < 29.9) {
+                alert("Sobrepeso");
+              }  
+
+                else if (resultado < 34.9) {
+                    alert("Obesidade grau I");
+                }
+   
+              
+            else if (resultado < 39.9) {
+                alert("Obesidade grau II");
+              }
+
+                else if (resultado > 40) {
+                    alert("Obesidade grau III");
+                  }
+
         }
         
         else if (Genero === "Feminino") {
             resultado = IMC_F();
-            // Restante do código
+            
+            if (resultado < 18.5) {
+                alert("Magreza: " + resultado);
+            }
+
+                else if ( resultado < 24.9) {
+                    alert("Normal");
+                }
+      
+            else if (resultado < 29.9) {
+                alert("Sobrepeso");
+              }  
+
+                else if (resultado < 34.9) {
+                    alert("Obesidade grau I");
+                }
+   
+              
+            else if (resultado < 39.9) {
+                alert("Obesidade grau II");
+              }
+
+                else if (resultado > 40) {
+                    alert("Obesidade grau III");
+                  }
         } 
         else {
             
