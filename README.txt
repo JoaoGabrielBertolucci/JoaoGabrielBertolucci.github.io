@@ -6,3 +6,5 @@ O Projeto ainda está em desenvolvimento, mas deve ficar pronto dentro do prazo 
 Atualização 18/03/23 16:46 - Projeto finalizado
 
 Atualização 19/03/23 16:45 - Projeto Passou por alterações
+
+Atualização 20/03/23 18:25 - Projeto Passou Por Alterções e Foi Atualizado
